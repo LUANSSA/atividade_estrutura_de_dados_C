@@ -1,0 +1,2 @@
+gcc desafio1_test.c requisition.c structure.c -o teste
+./teste
