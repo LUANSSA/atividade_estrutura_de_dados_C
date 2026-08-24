@@ -54,9 +54,7 @@ Requisition* removal(Structure *structure){
     }
 
     Node *removed_node = structure->front;
-
     Requisition *requisition = removed_node->requisition;
-
     structure->front = removed_node->next;
 
     //Se a fila ficar vazia, o final tambem deve ser NULL
@@ -65,9 +63,7 @@ Requisition* removal(Structure *structure){
     }
 
     structure->size--;
-
     free(removed_node);
-
     return requisition;
 }
 
@@ -91,9 +87,7 @@ void free_structure(Structure *structure){
 
     while (current != NULL) {
         Node *next = current->next;
-
         free(current);
-
         current = next;
     }
 
