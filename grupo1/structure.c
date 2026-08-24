@@ -17,6 +17,7 @@ Structure* create_structure(void){
     return structure;
 }
 
+// adiciona uma requisition ao final da fila
 int add(Structure *structure, Requisition *requisition){
 
     if (structure == NULL || requisition == NULL) {
@@ -45,6 +46,7 @@ int add(Structure *structure, Requisition *requisition){
     return 0;
 }
 
+// remove a primeira requisition da fila, segue a ordem 
 Requisition* removal(Structure *structure){
 
     if (structure == NULL || structure->front == NULL) {
@@ -57,6 +59,7 @@ Requisition* removal(Structure *structure){
 
     structure->front = removed_node->next;
 
+    //Se a fila ficar vazia, o final tambem deve ser NULL
     if (structure->front == NULL) {
         structure->rear = NULL;
     }
@@ -68,6 +71,7 @@ Requisition* removal(Structure *structure){
     return requisition;
 }
 
+//retorna a quantidade de requsition na fila 
 int get_size(Structure *structure){
 
     if (structure == NULL) {

@@ -17,19 +17,23 @@ Requisition* create_requisition(const char *name, int registration, const char *
         return NULL;
     }
 
+    // Copia do nome, limitando a 40 caracteres
     strncpy(requisition->name, name, 40);
     requisition->name[40] = '\0';
 
+    //Armazenando o codigo 
     requisition->registration = registration;
 
     strncpy(requisition->procedure, procedure, 10);
     requisition->procedure[10] = '\0';
 
+    //Retorno a requisição criada 
     return requisition;
 }
 
 const char* get_name(Requisition *requisition){
     
+    //verificando se requisition exite 
     if (requisition == NULL) {
         return NULL;
     }
@@ -48,6 +52,7 @@ int get_registration(Requisition *requisition){
 
 const char* get_procedure(Requisition *requisition){
 
+    // Verifica se o requisition existe antes de ver os dados
     if (requisition == NULL) {
         return NULL;
     }
