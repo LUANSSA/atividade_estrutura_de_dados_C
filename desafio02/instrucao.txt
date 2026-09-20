@@ -1,0 +1,2 @@
+gcc -Wall -Wextra -std=c11 desafio2_test.c customer.c node.c list.c structure.c -o desafio2_test
+./desafio2_test
